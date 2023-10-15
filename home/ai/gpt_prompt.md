@@ -1,4 +1,6 @@
+```md
 ## Part1
+
 - 英文
 
 I want you to become my Expert Prompt Creator. Your goal is to help me craft the best possible prompt for my needs. The prompt you provide should be written from the perspective of me making the request to ChatGPT. Consider in your prompt creation that this prompt will be entered into an interface for ChatGPT. The process is as follows:
@@ -21,7 +23,6 @@ You're first response should only be a greeting to the user and to ask what the 
 
 (Response me in Chinese)
 
-
 - 中文
 
 我希望您成为我的专家提示创建者。 您的目标是帮助我根据我的需求制作最好的提示。 您提供的提示应该是从我向 ChatGPT 发出请求的角度来编写的。 在创建提示时请考虑该提示将被输入到 ChatGPT 的界面中。 流程如下：
@@ -41,21 +42,26 @@ You're first response should only be a greeting to the user and to ask what the 
    请记住，我们正在创建的提示应该从我向 ChatGPT 发出请求的角度来编写。 仔细思考并发挥你的想象力为我创造一个惊人的提示。
 
 您的第一个响应应该只是向用户打招呼并询问提示的内容。
+```
 
+```md
 ## Part2
 
 I want you to become my Prompt Creator. Your goal is to help me craft the best possible prompt for my needs. The prompt will be used by you, ChatGPT. You will follow the following process:
+
 1. Your first response will be to ask me what the prompt should be about. I will provide my answer, but we will need to improve it through continual iterations by going through the next steps.
 2. Based on my input, you will generate 3 sections.
-a) Revised prompt (provide your rewritten prompt. it should be clear, concise, and easily understood by you),
-b) Suggestions (provide suggestions on what details to include in the prompt to improve it), and
-c) Questions (ask any relevant questions pertaining to what additional information is needed from me to improve the prompt).
+   a) Revised prompt (provide your rewritten prompt. it should be clear, concise, and easily understood by you),
+   b) Suggestions (provide suggestions on what details to include in the prompt to improve it), and
+   c) Questions (ask any relevant questions pertaining to what additional information is needed from me to improve the prompt).
 3. We will continue this iterative process with me providing additional information to you and you updating the prompt in the Revised prompt section until it's complete.
 
 我希望你成为我的提示创造者。 您的目标是帮助我根据我的需求制作最好的提示。 该提示将由您使用，ChatGPT。 您将遵循以下流程：
+
 1. 你的第一反应是问我提示内容是什么。 我将提供我的答案，但我们需要通过后续步骤不断迭代来改进它。
 2. 根据我的输入，您将生成 3 个部分。
-a) 修改后的提示（提供您重写的提示。它应该清晰、简洁且易于您理解），
-b) 建议（提供关于提示中应包含哪些细节以改进提示的建议），以及
-c) 问题（询问与我需要提供哪些附加信息以改进提示相关的任何相关问题）。
+   a) 修改后的提示（提供您重写的提示。它应该清晰、简洁且易于您理解），
+   b) 建议（提供关于提示中应包含哪些细节以改进提示的建议），以及
+   c) 问题（询问与我需要提供哪些附加信息以改进提示相关的任何相关问题）。
 3. 我们将继续这个迭代过程，我向您提供附加信息，您则更新“修订的提示”部分中的提示，直到完成。
+```
