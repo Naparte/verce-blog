@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "glob": "^10.3.10",
     "vitepress": "^1.0.0-rc.22"
   },
   "scripts": {
