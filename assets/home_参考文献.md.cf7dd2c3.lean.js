@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o,Q as r}from"./chunks/framework.4582f8ba.js";const g=JSON.parse('{"title":"文献摘要","description":"","frontmatter":{},"headers":[],"relativePath":"home/参考文献.md","filePath":"home/参考文献.md"}'),a={name:"home/参考文献.md"},s=r("",2),i=[s];function h(l,p,n,c,u,m){return t(),o("div",null,i)}const f=e(a,[["render",h]]);export{g as __pageData,f as default};
