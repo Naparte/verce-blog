@@ -44,7 +44,7 @@ The ClassStaticBlockDefinition Record Specification Type：类静态块定义记
 
 ```
 
-## Abstract Operations （抽象操作）
+## 抽象操作 (Abstract Operations )
 
 - 描述语言的底层行为和算法； 包括类型转换，测试和比较的操作，对象的操作定义
 
@@ -96,7 +96,7 @@ The ClassStaticBlockDefinition Record Specification Type：类静态块定义记
 | ------------------------------ | --- |
 | Operations on Iterator Objects |     |
 
-## Executable Code and Execution Contexts (可执行代码和执行上下文)
+## 可执行代码和执行上下文 (Executable Code and Execution Contexts)
 
 ```text
 
@@ -112,7 +112,7 @@ The ClassStaticBlockDefinition Record Specification Type：类静态块定义记
 
 ```
 
-## Ordinary and Exotic Objects Behaviours (普通对象和异类对象行为)
+## 普通对象和异类对象行为 (Ordinary and Exotic Objects Behaviours)
 
 ```text
     普通对象和异类对象在ECMAScript中有以下区别：
@@ -136,7 +136,7 @@ The ClassStaticBlockDefinition Record Specification Type：类静态块定义记
 | Module Namespace Exotic Objects    | 模块命名空间对象，用于表示模块的命名空间。               |
 | Immutable Prototype Exotic Objects | 不可变原型对象，用于表示不可变的原型对象。               |
 
-## ECMAScript Language: Expressions (ECMAScript 语言表达式)
+## 语言表达式 (Expressions)
 
 | 表达式类型                                   | 描述                                                         |
 | -------------------------------------------- | ------------------------------------------------------------ |
@@ -181,65 +181,61 @@ The ClassStaticBlockDefinition Record Specification Type：类静态块定义记
 
 - 定义了 this 指向
 
+## 语句和声明 (Statements and Declarations)
 
-## ECMAScript Language: Statements and Declarations（语句和声明）
+| 章节                                                          | 描述                                                               |
+| ------------------------------------------------------------- | ------------------------------------------------------------------ |
+| 语句语义（Statement Semantics）                               | 描述语句的语义和执行顺序。                                         |
+| 块语句（Block）                                               | 描述用花括号括起来的一组语句的语法和行为。                         |
+| 声明和变量声明语句（Declarations and the Variable Statement） | 描述变量和函数声明的语法和行为。                                   |
+| 空语句（Empty Statement）                                     | 描述一个空语句的语法和行为。                                       |
+| 表达式语句（Expression Statement）                            | 描述将表达式作为语句的语法和行为。                                 |
+| if 语句（The if Statement）                                   | 描述条件语句的语法和行为，用于根据条件执行不同的代码块。           |
+| 迭代语句（Iteration Statements）                              | 描述循环语句的语法和行为，如 for 循环、while 循环等。              |
+| continue 语句（The continue Statement）                       | 描述 continue 语句的语法和行为，用于跳过当前循环的剩余部分。       |
+| break 语句（The break Statement）                             | 描述 break 语句的语法和行为，用于跳出当前循环或 switch 语句。      |
+| return 语句（The return Statement）                           | 描述 return 语句的语法和行为，用于从函数中返回一个值。             |
+| with 语句（The with Statement）                               | 描述 with 语句的语法和行为，用于创建一个临时的作用域链。           |
+| switch 语句（The switch Statement）                           | 描述 switch 语句的语法和行为，用于根据不同的条件执行不同的代码块。 |
+| 标记语句（Labelled Statements）                               | 描述标记语句的语法和行为，用于在代码中创建标记以供其他语句引用。   |
+| throw 语句（The throw Statement）                             | 描述 throw 语句的语法和行为，用于抛出一个异常。                    |
+| try 语句（The try Statement）                                 | 描述 try 语句的语法和行为，用于捕获和处理异常。                    |
+| debugger 语句（The debugger Statement）                       | 描述 debugger 语句的语法和行为，用于在代码中设置断点。             |
 
-| 章节 | 描述 |
-| --- | --- |
-| 语句语义（Statement Semantics） | 描述语句的语义和执行顺序。 |
-| 块语句（Block） | 描述用花括号括起来的一组语句的语法和行为。 |
-| 声明和变量声明语句（Declarations and the Variable Statement） | 描述变量和函数声明的语法和行为。 |
-| 空语句（Empty Statement） | 描述一个空语句的语法和行为。 |
-| 表达式语句（Expression Statement） | 描述将表达式作为语句的语法和行为。 |
-| if语句（The if Statement） | 描述条件语句的语法和行为，用于根据条件执行不同的代码块。 |
-| 迭代语句（Iteration Statements） | 描述循环语句的语法和行为，如for循环、while循环等。 |
-| continue语句（The continue Statement） | 描述continue语句的语法和行为，用于跳过当前循环的剩余部分。 |
-| break语句（The break Statement） | 描述break语句的语法和行为，用于跳出当前循环或switch语句。 |
-| return语句（The return Statement） | 描述return语句的语法和行为，用于从函数中返回一个值。 |
-| with语句（The with Statement） | 描述with语句的语法和行为，用于创建一个临时的作用域链。 |
-| switch语句（The switch Statement） | 描述switch语句的语法和行为，用于根据不同的条件执行不同的代码块。 |
-| 标记语句（Labelled Statements） | 描述标记语句的语法和行为，用于在代码中创建标记以供其他语句引用。 |
-| throw语句（The throw Statement） | 描述throw语句的语法和行为，用于抛出一个异常。 |
-| try语句（The try Statement） | 描述try语句的语法和行为，用于捕获和处理异常。 |
-| debugger语句（The debugger Statement） | 描述debugger语句的语法和行为，用于在代码中设置断点。 |
+## 函数和类 (Functions and Classes )
 
+| 章节                                                       | 描述                                                   |
+| ---------------------------------------------------------- | ------------------------------------------------------ |
+| 参数列表（Parameter Lists）                                | 描述函数或方法定义中的参数列表的语法和行为。           |
+| 函数定义（Function Definitions）                           | 描述使用 function 关键字定义函数的语法和行为。         |
+| 箭头函数定义（Arrow Function Definitions）                 | 描述使用箭头函数语法定义函数的语法和行为。             |
+| 方法定义（Method Definitions）                             | 描述在对象或类中定义方法的语法和行为。                 |
+| 生成器函数定义（Generator Function Definitions）           | 描述使用 function 关键字定义生成器函数的语法和行为。   |
+| 异步生成器函数定义（Async Generator Function Definitions） | 描述使用 async 关键字定义异步生成器函数的语法和行为。  |
+| 类定义（Class Definitions）                                | 描述使用 class 关键字定义类的语法和行为。              |
+| 异步函数定义（Async Function Definitions）                 | 描述使用 async 关键字定义异步函数的语法和行为。        |
+| 异步箭头函数定义（Async Arrow Function Definitions）       | 描述使用箭头函数语法定义异步函数的语法和行为。         |
+| 尾部位置调用（Tail Position Calls）                        | 描述尾部位置调用的语法和行为，用于优化递归函数的性能。 |
 
-## ECMAScript Language: Functions and Classes （函数和类）
+## 结构化数据 (Structured Data )
 
+| 章节                                                   | 描述                                                                        |
+| ------------------------------------------------------ | --------------------------------------------------------------------------- |
+| JSON 对象（The JSON Object）                           | 描述了 ECMAScript 语言中的 JSON 对象和 JSON 字符串的解析和序列化。          |
+| ArrayBuffer 对象（The ArrayBuffer Object）             | 描述了 ECMAScript 语言中的 ArrayBuffer 对象和二进制数据的处理。             |
+| DataView 对象（The DataView Object）                   | 描述了 ECMAScript 语言中的 DataView 对象和二进制数据的读写操作。            |
+| TypedArray 对象（The TypedArray Objects）              | 描述了 ECMAScript 语言中的 TypedArray 对象和基于 ArrayBuffer 的类型化数组。 |
+| SharedArrayBuffer 对象（The SharedArrayBuffer Object） | 描述了 ECMAScript 语言中的 SharedArrayBuffer 对象和多线程共享内存的处理。   |
+| Atomics 对象（The Atomics Object）                     | 描述了 ECMAScript 语言中的 Atomics 对象和原子操作的处理。                   |
 
-| 章节 | 描述 |
-| --- | --- |
-| 参数列表（Parameter Lists） | 描述函数或方法定义中的参数列表的语法和行为。 |
-| 函数定义（Function Definitions） | 描述使用function关键字定义函数的语法和行为。 |
-| 箭头函数定义（Arrow Function Definitions） | 描述使用箭头函数语法定义函数的语法和行为。 |
-| 方法定义（Method Definitions） | 描述在对象或类中定义方法的语法和行为。 |
-| 生成器函数定义（Generator Function Definitions） | 描述使用function关键字定义生成器函数的语法和行为。 |
-| 异步生成器函数定义（Async Generator Function Definitions） | 描述使用async关键字定义异步生成器函数的语法和行为。 |
-| 类定义（Class Definitions） | 描述使用class关键字定义类的语法和行为。 |
-| 异步函数定义（Async Function Definitions） | 描述使用async关键字定义异步函数的语法和行为。 |
-| 异步箭头函数定义（Async Arrow Function Definitions） | 描述使用箭头函数语法定义异步函数的语法和行为。 |
-| 尾部位置调用（Tail Position Calls） | 描述尾部位置调用的语法和行为，用于优化递归函数的性能。 |
+## 控制抽象对象 (Control Abstraction Objects )
 
-## Structured Data （结构化数据）
-
-| 章节 | 描述 |
-| --- | --- |
-| JSON对象（The JSON Object） | 描述了ECMAScript语言中的JSON对象和JSON字符串的解析和序列化。 |
-| ArrayBuffer对象（The ArrayBuffer Object） | 描述了ECMAScript语言中的ArrayBuffer对象和二进制数据的处理。 |
-| DataView对象（The DataView Object） | 描述了ECMAScript语言中的DataView对象和二进制数据的读写操作。 |
-| TypedArray对象（The TypedArray Objects） | 描述了ECMAScript语言中的TypedArray对象和基于ArrayBuffer的类型化数组。 |
-| SharedArrayBuffer对象（The SharedArrayBuffer Object） | 描述了ECMAScript语言中的SharedArrayBuffer对象和多线程共享内存的处理。 |
-| Atomics对象（The Atomics Object） | 描述了ECMAScript语言中的Atomics对象和原子操作的处理。 |
-
-
-## Control Abstraction Objects （控制抽象对象）
-
-| 章节 | 描述 |
-| --- | --- |
-| 迭代器协议（The Iterator Protocol） | 描述了ECMAScript语言中的迭代器协议和可迭代对象的处理。 |
-| Promise对象（Promise Objects） | 描述了ECMAScript语言中的Promise对象和异步编程的处理。 |
-| GeneratorFunction对象（GeneratorFunction Objects） | 描述了ECMAScript语言中的GeneratorFunction对象和生成器函数的处理。 |
-| AsyncGeneratorFunction对象（AsyncGeneratorFunction Objects） | 描述了ECMAScript语言中的AsyncGeneratorFunction对象和异步生成器函数的处理。 |
-| Generator对象（Generator Objects） | 描述了ECMAScript语言中的Generator对象和生成器的处理。 |
-| AsyncGenerator对象（AsyncGenerator Objects） | 描述了ECMAScript语言中的AsyncGenerator对象和异步生成器的处理。 |
-| AsyncFunction对象（AsyncFunction Objects） | 描述了ECMAScript语言中的AsyncFunction对象和异步函数的处理。 |
+| 章节                                                          | 描述                                                                           |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 迭代器协议（The Iterator Protocol）                           | 描述了 ECMAScript 语言中的迭代器协议和可迭代对象的处理。                       |
+| Promise 对象（Promise Objects）                               | 描述了 ECMAScript 语言中的 Promise 对象和异步编程的处理。                      |
+| GeneratorFunction 对象（GeneratorFunction Objects）           | 描述了 ECMAScript 语言中的 GeneratorFunction 对象和生成器函数的处理。          |
+| AsyncGeneratorFunction 对象（AsyncGeneratorFunction Objects） | 描述了 ECMAScript 语言中的 AsyncGeneratorFunction 对象和异步生成器函数的处理。 |
+| Generator 对象（Generator Objects）                           | 描述了 ECMAScript 语言中的 Generator 对象和生成器的处理。                      |
+| AsyncGenerator 对象（AsyncGenerator Objects）                 | 描述了 ECMAScript 语言中的 AsyncGenerator 对象和异步生成器的处理。             |
+| AsyncFunction 对象（AsyncFunction Objects）                   | 描述了 ECMAScript 语言中的 AsyncFunction 对象和异步函数的处理。                |

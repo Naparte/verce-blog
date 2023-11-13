@@ -35,3 +35,7 @@ ECMAScript operations that do not interpret String contents apply no further sem
 
 重点文章
 - https://262.ecma-international.org/14.0/#sec-syntax-directed-operations
+- https://262.ecma-international.org/14.0/#sec-executable-code-and-execution-contexts
+- https://262.ecma-international.org/14.0/#sec-ordinary-and-exotic-objects-behaviours
+- https://262.ecma-international.org/14.0/#sec-arguments-exotic-objects
+- 
