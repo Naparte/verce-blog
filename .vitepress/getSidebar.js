@@ -4,7 +4,7 @@ import path from "path";
 function generateDirectoryTree(directoryPath) {
   const tree = [];
 
-  const files = glob.sync(path.join(directoryPath, "**/*.md"));
+  const files = glob.sync("./home/**/*.md");
 
   for (const file of files) {
     const relativePath = path.relative(directoryPath, file);
@@ -34,7 +34,35 @@ function generateDirectoryTree(directoryPath) {
     });
   }
 
-  return tree;
+  return dictionarySort(tree);
+}
+
+//字典排序
+function dictionarySort(arr) {
+  arr.sort(function (itemA, itemB) {
+    let a = itemA.text;
+    let b = itemB.text;
+    let i = 0;
+    if (!a.items) {
+      return -1;
+    }
+    while (a.charAt(i) === b.charAt(i)) {
+      i++;
+    }
+    return a.charCodeAt(i) - b.charCodeAt(i);
+  });
+  return arr;
 }
 
 export const sidebar = generateDirectoryTree("home");
+
+function getFirstItemLink(treeArr) {
+  let firstitem = treeArr[0];
+  if (firstitem && !firstitem.items) {
+    return firstitem.link;
+  }
+
+  return getFirstItemLink(firstitem.items);
+}
+
+export const firstSidleLink = getFirstItemLink(sidebar);
