@@ -9,7 +9,7 @@ export default defineConfig({
   base: "/verce-blog/",
   outDir: "./dist",
   lastUpdated: true,
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  head: [["link", { rel: "icon", href: "./favicon.ico" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
@@ -36,7 +36,7 @@ export default defineConfig({
         },
         link: "https://juejin.cn/user/4054654613726295",
       },
-      { icon: "github", link: "https://github.com/Naparte" },
+      { icon: "github", link: "https://github.com/Naparte/verce-blog" },
     ],
 
     // footer: {
