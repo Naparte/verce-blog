@@ -1,0 +1,42 @@
+<script>
+  // 关键点1：定义在全局，在depend的时候方便收集
+  let activeEffect;
+  class Dep {
+    constructor(value) {
+      this.subscribe = new Set();
+      this._value = value;
+    }
+    depend() {
+      if (activeEffect) {
+        this.subscribe.add(activeEffect);
+      }
+    }
+    notify() {
+      this.subscribe.forEach((sub) => {
+        sub();
+      });
+    }
+    get value() {
+      this.depend();
+      return this._value;
+    }
+    set value(newValue) {
+      this._value = newValue;
+      this.notify();
+    }
+  }
+
+  function watchEffect(effect) {
+    activeEffect = effect;
+    effect();
+    activeEffect = null;
+  }
+
+  const dep = new Dep("init");
+
+  watchEffect(() => {
+    console.log(dep.value);
+  });
+
+  dep.value = "change";
+</script>
