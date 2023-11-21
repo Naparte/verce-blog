@@ -1,0 +1,16 @@
+{
+  "name": "5.CommonJSDemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "script": {
+    "build": "npx browserify main.js -o ./dist/bundle.js"
+  },
+  "dependencies": {
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "require": "^2.4.20"
+  }
+}
