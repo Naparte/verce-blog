@@ -43,13 +43,13 @@ User 配置使用用户名，写账号user.name或写git就行
 demo
 
 ```shell
-# cky
+# naparte
 
-Host cky
+Host naparte
 HostName github.com
 PreferredAuthentications publickey
-IdentityFile C:\Users\User\.ssh\cky
-User cky
+IdentityFile C:\Users\User\.ssh\naparte
+User naparte
 
 # Port 端口号（默认 22）
 
@@ -68,16 +68,16 @@ User hzh
 - 测试连接
 
 ```shell
-$ ssh -T git@cky
+$ ssh -T git@naparte
 # You've successfully authenticated, but GitHub does not provide shell access 提示这个表示成功了
 ```
 
 > 6、拉取项目
 
 ```shell
-git clone git@github.com:cky/yourblog.git
+git clone git@github.com:naparte/yourblog.git
 # 改为(@后面改成你的host名称)
-git clone git@cky:cky/yourblog.git
+git clone git@naparte:naparte/yourblog.git
 ```
 
 - 解决老项目 git pull 需要输入密码的问题

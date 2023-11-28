@@ -5,7 +5,7 @@ function generateDirectoryTree(directoryPath) {
   const tree = [];
 
   const files = glob.sync("./home/**/*.md");
-
+  files.sort();
   for (const file of files) {
     const relativePath = path.relative(directoryPath, file);
     const parts = relativePath.split(path.sep);
@@ -37,7 +37,7 @@ function generateDirectoryTree(directoryPath) {
   return dictionarySort(tree);
 }
 
-//字典排序
+// 字典排序
 function dictionarySort(arr) {
   arr.sort(function (itemA, itemB) {
     let a = itemA.text;
