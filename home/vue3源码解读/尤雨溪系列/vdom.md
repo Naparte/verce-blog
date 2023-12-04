@@ -1,5 +1,7 @@
 # vdom 解读
 
+## 写法差异
+
 ```javascript
 // vue2的写法
 // render (h) {
@@ -40,13 +42,15 @@ const APP2 = {
 };
 ```
 
-> vue3 和 vue2 带来的优化
+## vue3 和 vue2 带来的优化
 
 - 以 on 开头在编译过程中默认绑定为监听事件（vue 认为这是最好的的处理方式，不用关注是应该绑定在 attribute 还是其他）
 - vue2 和 vue3 的差异，在渲染函数式可以全局导入，
 - h 不需要在 render 上传入；解决 vue2 大的 render 函数拆分问题；vue3 可以随意拆分块
 - props 扁平化传入; vue 判断 属性是否在原生 DOM 属性上，存在的话设置为 property，不存在的话设置为 attribute
 - vue dom 的灵感来源 snabbdom
+
+## 最小的 vdom 结构
 
 ```html
 <!-- 最小的vdom结构 -->
@@ -96,6 +100,8 @@ const APP2 = {
   mount(vdom, document.getElementById("app"));
 </script>
 ```
+
+## patch 算法
 
 ```html
 <!-- patch算法 -->
