@@ -1,36 +1,52 @@
-import { Command } from "commander";
-const program = new Command();
+// class MyInfo extends HTMLElement {
+//   constructor() {
+//     super();
 
-// program
-//   .version("1.0.0")
-//   .description("一个简单的命令行工具")
-//   .option("--first")
-//   .option("-s, --separator <char>")
-//   .on("--help", () => {
-//     console.log("");
-//     console.log("示例命令:");
-//     console.log("node test.js -s / --first a/b/c");
-//   });
+//     var image = document.createElement("img");
+//     image.src =
+//       "https://github.com/Naparte/verce-blog/blob/main/avatar.png?raw=true";
+//     image.width = 40;
+//     image.classList.add("image");
 
-// program.parse(process.argv);
+//     var container = document.createElement("div");
+//     container.classList.add("container");
 
-// const options = program.opts();
+//     var name = document.createElement("p");
+//     name.classList.add("name");
+//     name.innerText = "Name: Naparte";
 
-// console.log(options);
-// 命令行 node .\test.js --first firestarguement -s st  输出
-// {
-//   first: true,
-//   separator: "st",
+//     var email = document.createElement("p");
+//     email.classList.add("email");
+//     email.innerText = "Email: Naparte@163.com";
+
+//     var button = document.createElement("button");
+//     button.classList.add("button");
+//     button.innerText = "Follow";
+
+//     container.append(name, email, button);
+//     this.append(image, container);
+//   }
 // }
+// window.customElements.define("my-info", MyInfo);
 
-// 单独一个命令执行
-program
-  .command("serve")
-  .argument("<script>")
-  .option("-p, --port <number>", "port number", 80)
-  .action(function () {
-    console.error("Run script %s on port %s", this.args[0], this.opts().port);
-  });
+class MyInfo extends HTMLElement {
+  constructor() {
+    super();
 
-// 注意这句话一定要
-program.parse(process.argv);
+    var templateElem = document.getElementById("my-info-template");
+    var content = templateElem.content.cloneNode(true);
+
+    //  :host CSS 伪类选择内部使用了该 CSS 的影子 DOM（shadow DOM） 的影子宿主（shadow host）——换句话说，这允许你从其影子 DOM 内部选择自定义元素
+    // https://developer.mozilla.org/zh-CN/docs/Web/CSS/:host
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    shadowRoot.appendChild(content);
+
+    // 添加操作事件
+    this.$button = shadowRoot.querySelector("button");
+    this.$button.addEventListener("click", () => {
+      alert("click");
+    });
+  }
+}
+
+window.customElements.define("my-info", MyInfo);
