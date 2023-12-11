@@ -1,14 +1,16 @@
-import { chromium } from "playwright";
+import mm from 'micromatch';
+// mm.all(string, patterns[, options]);
 
-(async () => {
-  const browser = await chromium.launch();
-  const context = await browser.newContext();
-  const page = await context.newPage();
+console.log(mm.all('foo.js', ['foo.js']));
+// true
 
-  await page.goto("https://www.baidu.com");
-  await page.screenshot({ path: "example.png" });
+console.log(mm.all('foo.js', ['*.js', '!foo.js']));
+// false
 
-  await browser.close();
-})();
+console.log(mm.all('foo.js', ['*.js', 'foo.js']));
+// true
 
-console.log('ssss')
+console.log(mm.all('foo.js', ['*.js', 'f*', '*o*', '*o.js']));
+// true
+
+// (16) ['match', 'matcher', 'isMatch', 'any', 'not', 'contains', 'matchKeys', 'some', 'every', 'all', 'capture', 'makeRe', 'scan', 'parse', 'braces', 'braceExpand']
