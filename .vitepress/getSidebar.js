@@ -1,6 +1,7 @@
 import * as glob from "glob";
 import path from "path";
-import { compareWindowsFilePaths } from "./sortfn";
+import { compareWindowsFilePaths } from "./sortfn.js";
+import { NavigationBar } from "./const.js";
 
 /**
  * 生成目录树
@@ -42,10 +43,15 @@ function generateDirectoryTree(directoryPath) {
     });
   }
 
-  return tree.reverse();
+  return tree;
 }
 
-export const sidebar = generateDirectoryTree("home");
+export const sidebar = NavigationBar.filter((item) => {
+  return item.path;
+}).reduce((accumulator, key) => {
+  accumulator[`/${key.path}/`] = generateDirectoryTree(key.path);
+  return accumulator;
+}, {});
 
 /**
  * 获取目录树中第一个叶子节点的链接
@@ -61,4 +67,12 @@ function getFirstItemLink(treeArr) {
   return getFirstItemLink(firstitem.items);
 }
 
-export const firstSidleLink = getFirstItemLink(sidebar);
+export const nav = NavigationBar.map((item) => {
+  if (item.link) {
+    return item;
+  }
+  return {
+    ...item,
+    link: getFirstItemLink(sidebar[`/${item.path}/`]),
+  };
+});

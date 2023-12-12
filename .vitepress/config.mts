@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 
-import { sidebar, firstSidleLink } from "./getSidebar";
+import { sidebar, nav } from "./getSidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -12,16 +12,11 @@ export default defineConfig({
   head: [["link", { rel: "icon", href: "./favicon.ico" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-
-    nav: [
-      { text: "首页", link: "/" },
-      {
-        text: "总览",
-        link: firstSidleLink,
-      },
-    ],
+    logo: "/avatar.png",
+    nav,
 
     sidebar,
+    lastUpdatedText: "最后更新",
 
     socialLinks: [
       {
@@ -39,16 +34,15 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/Naparte/verce-blog" },
     ],
 
-    // footer: {
-    //   message: "Released under the MIT License.",
-    //   copyright: "Copyright © 2018-present Naparte",
-    // },
-
-    lastUpdatedText: "最后更新",
-
-    docFooter: {
-      prev: "上一页",
-      next: "下一页",
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2018-present Naparte",
+    },
+    editLink: {
+      pattern: "https://github.com/vuejs/vitepress/edit/main/docs/:path",
+    },
+    search: {
+      provider: "local",
     },
   },
 });
