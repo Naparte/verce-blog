@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Naparte Blog"
-  text: "Base VitePress Site"
+  text: "1.01^365 ≈ 37.78"
   tagline: Only by never forgetting your original intention can you always succeed
   actions:
     - theme: brand
@@ -15,11 +15,10 @@ hero:
       link: https://juejin.cn/user/4054654613726295
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 深入理解系列
+    details: In-depth understanding of front-end core technologies
+  - title: 前端技术探索
+    details: Learn about the latest front-end technologies
+  - title: 每日工具库
+    details: Learn one npm package every day
 ---
-
