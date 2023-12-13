@@ -14,7 +14,7 @@ export const NavigationBar = [
     path: "Toolkit",
   },
   {
-    text: "杂谈",
+    text: "阅",
     path: "MiscellaneousTalk",
   },
 ];

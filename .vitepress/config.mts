@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 
-import { sidebar, nav } from "./getSidebar";
+import { sidebar, nav } from "./get_sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
