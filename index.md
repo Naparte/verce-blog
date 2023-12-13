@@ -19,6 +19,6 @@ features:
     details: In-depth understanding of front-end core technologies
   - title: 前端技术探索
     details: Learn about the latest front-end technologies
-  - title: 每日工具库
+  - title: 每日·壹库
     details: Learn one npm package every day
 ---

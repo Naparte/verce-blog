@@ -10,7 +10,7 @@ export const NavigationBar = [
     path: "TechnologyExploration",
   },
   {
-    text: "每日工具库",
+    text: "每日·壹库",
     path: "Toolkit",
   },
   {
