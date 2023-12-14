@@ -17,4 +17,8 @@ export const NavigationBar = [
     text: "阅",
     path: "MiscellaneousTalk",
   },
+  {
+    text: "Interview",
+    path: "InterviewQuestions",
+  },
 ];
