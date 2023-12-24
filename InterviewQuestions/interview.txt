@@ -1,0 +1,26 @@
+## 什么是亮点
+
+- 基于业务封装公共的能力；解决公共问题并派生
+
+  > 梳理业务中 10 余个类似组件，抽象公共能力，并在其他项目中推广 <br>
+  > 整体的包体积，平均减少 10%，研发提效 30% <br>
+  > 后续 FE 介入率降低为 75%
+
+- 使用工程化手段，解决了一类流程或者研发痛点问题
+
+  > 做了一个低代码 <br>
+  > 做了一套 CICD 流程 <br>
+  > 做了一个 webpack plugin；babel plugin <br>
+  > 搞定了基建能力
+
+- 创造出了前人没有的玩法
+
+  > react > preact <br>
+  > `<div>, <point>,<line>,<sequre>` <br>
+
+## 什么不是亮点
+
+- 使用 vue 全家桶，vue-router，vuex
+- webapack split chunk ；minimize
+- 防抖节流，无限滚动
+- 封装多个公共组件
