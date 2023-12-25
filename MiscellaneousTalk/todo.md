@@ -90,4 +90,4 @@
 - [ airbnb 代码风格指南 ](https://github.com/airbnb/javascript)
 - [ 每个程序员都应该知道的东西，不单独指前端开发 ](https://github.com/mtdvio/every-programmer-should-know)
 - [ JS 的数据结构于算法 ](https://github.com/trekhleb/javascript-algorithms)
-- [ node 最佳实践](https://github.com/goldbergyoni/nodebestpractices)
+- [ node 最佳实践 ](https://github.com/goldbergyoni/nodebestpractices)
