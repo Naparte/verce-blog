@@ -35,7 +35,6 @@
 ## principle
 
 - 原子化 css
-- asm.js & WebAssembly & Emscripten 编译器
 - Reduce 和 Transduce 的思想 Pointfree
 - codegen
 - IntersectionObserver API
