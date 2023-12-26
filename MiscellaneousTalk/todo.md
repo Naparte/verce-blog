@@ -14,7 +14,6 @@
 
 ```json
 {
-  "enquirer": "^2.4.1",
   "esbuild-plugin-polyfill-node": "^0.3.0",
   "estree-walker": "^2.0.2",
   "jsdom": "^23.0.1",
@@ -65,6 +64,13 @@
 - 如何处理异常捕获
 - 介绍下 DFS 深度优先
 - 发布-订阅和观察者模式的区别
+
+## React
+
+- Redux
+- react-router
+- Formik
+- React Hook Form https://www.react-hook-form.com/
 
 ## 待读
 
