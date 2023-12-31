@@ -1,0 +1,110 @@
+# npm vs yarn vs pnpm
+
+
+<!-- > npm 安装机制
+- 首先，执行 npm install 之后，会检查和获取 npm 的配置，这里的优先级为：
+    - 项目级的 .npmrc 文件 > 用户级的 .npmrc 文件 > 全局级的 .npmrc > npm 内置的 .npmrc 文件
+    - 然后，检查项目中是否有 package-lock.json 文件：
+
+- 如果有，检查 package-lock.json 和 package.json 声明的依赖是否一致：
+    - 一致，直接使用 package-lock.json 中的信息，从网络或者缓存中加载依赖。
+    - 不一致，根据下述流程中的不同版本进行处理。
+  
+- 如果没有，那么会根据 package.json 递归构建依赖树，然后就会根据构建好的依赖去下载完整的依赖资源，在下载的时候，会检查有没有相关的资源缓存：
+    - 存在，直接解压到 node_modules 文件中。
+    - 不存在，从 npm 远端仓库下载包，校验包的完整性，同时添加到缓存中，解压到 node_modules 中 -->
+
+
+> npm/yarn install 原理
+- 主要分为两个部分, 首先，执行 npm/yarn install之后，包如何到达项目 node_modules 当中。其次，node_modules 内部如何管理依赖;执行命令后，首先会构建依赖树，然后针对每个节点下的包，会经历下面四个步骤:
+1. 将依赖包的版本区间解析为某个具体的版本号
+2. 下载对应版本依赖的 tar 包到本地离线镜像
+3. 将依赖从离线镜像解压到本地缓存
+4. 将依赖从缓存拷贝到当前目录的 node_modules 目录
+
+
+> 依赖在node_modules内部目录结构
+
+```javascript
+//  npm1、npm2 中呈现出的是嵌套结构
+
+node_modules
+└─ foo
+   ├─ index.js
+   ├─ package.json
+   └─ node_modules
+      └─ bar
+         ├─ index.js
+         └─ package.json
+
+// 设计存在什么问题:
+// 1. 依赖层级太深，会导致文件路径过长的问题，尤其在 window 系统下。
+// 2. 大量重复的包被安装，文件体积超级大。比如跟 foo 同级目录下有一个baz，两者都依赖于同一个版本的lodash，那么 lodash 会分别在两者的 node_modules 中被安装，也就是重复安装。
+// 3. 模块实例不能共享。比如 React 有一些内部变量，在两个不同包引入的 React 不是同一个模块实例，因此无法共享内部变量，导致一些不可预知的 bug。
+           
+```
+
+```javascript
+//  npm3 中呈现出的是嵌套结构
+
+node_modules
+├─ foo
+|  ├─ index.js
+|  └─ package.json
+└─ bar
+   ├─ index.js
+   └─ package.json
+
+
+// 1. 依赖结构的不确定性(不确定性是指，foo和bar都依赖 base64的npm，但是版本不一致，谁先被提到node_modules下面的是不确定的)。
+// 2. 扁平化算法本身的复杂性很高，耗时较长。
+// 3. 项目中仍然可以非法访问没有声明过依赖的包
+           
+```
+- pnpm 结构
+    1. 根目录下的 node_modules 下面不再是眼花缭乱的依赖，而是跟 package.json 声明的依赖基本保持一致。即使 pnpm 内部会有一些包会设置依赖提升，会被提升到根目录 node_modules 当中，但整体上，根目录的node_modules比以前还是清晰和规范了许多
+    2. 外层的目录会映射到pnpm目录下的包里面
+
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/64c0cdbb6cf64187b9ca0c05b556f860~tplv-k3u1fbpfcp-watermark.image?)
+
+
+## 总结
+> npm（包管理鼻祖）
+
+- 优点
+1. 官方支持：npm 是 Node.js 的官方包管理器，因此它得到了广泛的支持和使用。
+2. 自动依赖项解析：npm 可以自动解析项目中的依赖项，并安装所需的软件包。
+3. 版本控制：npm 使用 package-lock.json 文件来确保安装过程中使用相同的依赖项版本。
+
+- 缺点
+1. 安装速度较慢：由于 npm 是单线程解析依赖项，因此安装速度可能相对较慢。
+2. 文件冲突：由于 npm 使用 package-lock.json 文件来锁定依赖项版本，
+
+> yarn（解决npm不能并发和锁版本问题）
+
+- 优点
+1. 安装速度快：由于 yarn 可以并行下载和缓存软件包，因此安装速度通常比 npm 快。
+2. 版本控制：yarn 使用 yarn.lock 文件来确保安装过程中使用相同的依赖项版本。
+3. 离线模式：yarn 支持离线模式，可以在没有互联网连接的情况下工作。https://www.yarnpkg.cn/features/offline-cache
+
+> 缺点
+1. 依赖项缓存：yarn 将所有软件包都缓存在本地，这可能会占用大量磁盘空间。
+
+> pnpm（解决幽灵依赖问题）
+
+- 优点
+1. 安装速度最快：由于 pnpm 可以共享依赖项，因此它可以更快地安装和更新模块。
+2. 多线程解析：与 yarn 类似，pnpm 也可以使用多线程解析依赖项。
+3. 离线模式：pnpm 支持离线模式，并且可以在没有互联网连接的情况下工作。
+4. 更好的内存管理：pnpm 使用更好的内存管理技术，可以更有效地利用系统资源。
+
+- 缺点
+1. 相对较新：由于 pnpm 是较新的包管理器，因此可能会缺乏一些 npm 和 yarn 中的功能和资源。
+2. 可能存在兼容性问题：由于 pnpm 采用了不同的依赖项解析方法，因此可能会存在一些兼容性问题。
+
+
+*参考资料*:
+链接：https://juejin.cn/post/7232114747347484709
+链接：https://juejin.cn/post/6932046455733485575
+
+

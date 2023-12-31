@@ -7,6 +7,8 @@
 - rollup
 - ramda
 - esbuild
+- spritesmith
+- 
 
 > vue
 
