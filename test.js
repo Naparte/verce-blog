@@ -1,40 +1,165 @@
-const data = {
-  name: "Naparte",
-  sex: 0,
-  role: 1,
-  time: new Date().getTime(),
-};
-const invite = function (arrs, nameExp, sexExp, roleExp, timeExp) {
-  let strName = nameExp;
-  // 性别处理
-  let strSex = ["先生", "女士"][sexExp];
-  // 角色处理
-  const role = {
-    1: "微前端",
-    2: "webpack",
-    3: "可视化",
-    4: "工程化",
-  };
-  let strRole = role[roleExp];
-  // 日期处理
-  let strTime = new Date(timeExp).toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+class MyPromise {
+  // 构造⽅法
+  constructor(executor) {
+    // 初始化值
+    this.initValue();
+    // 初始化this指向
+    this.initBind();
+    try {
+      // 执⾏传进来的函数
+      executor(this.resolve, this.reject);
+    } catch (e) {
+      // 捕捉到错误直接执⾏reject
+      this.reject(e);
+    }
+  }
+  initBind() {
+    // 初始化this
+    this.resolve = this.resolve.bind(this);
+    this.reject = this.reject.bind(this);
+  }
+  initValue() {
+    // 初始化值
+    this.PromiseResult = null; // 终值
+    this.PromiseState = "pending"; // 状态
+    this.onFulfilledCallbacks = []; // 保存成功回调
+    this.onRejectedCallbacks = []; // 保存失败回调
+  }
+  resolve(value) {
+    // state是不可变的
+    if (this.PromiseState !== "pending") return;
+    // 如果执⾏resolve，状态变为fulfilled
+    this.PromiseState = "fulfilled";
+    // 终值为传进来的值
+    this.PromiseResult = value;
+    // 执⾏保存的成功回调
+    while (this.onFulfilledCallbacks.length) {
+      this.onFulfilledCallbacks.shift()(this.PromiseResult);
+    }
+  }
+  reject(reason) {
+    // state是不可变的
+    if (this.PromiseState !== "pending") return;
+    // 如果执⾏reject，状态变为rejected
+    this.PromiseState = "rejected";
+    // 终值为传进来的reason
+    this.PromiseResult = reason;
+    // 执⾏保存的失败回调
+    while (this.onRejectedCallbacks.length) {
+      this.onRejectedCallbacks.shift()(this.PromiseResult);
+    }
+  }
+  then(onFulfilled, onRejected) {
+    // 接收两个回调 onFulfilled, onRejected
+    // 参数校验，确保⼀定是函数
+    onFulfilled = typeof onFulfilled === "function" ? onFulfilled : v;
+    (al) => val;
+    onRejected = typeof onRejected === "function" ? onRejected : reas;
+    (on) => {
+      throw reason;
+    };
+    var thenPromise = new MyPromise((resolve, reject) => {
+      const resolvePromise = (cb) => {
+        setTimeout(() => {
+          try {
+            const x = cb(this.PromiseResult);
+            if (x === thenPromise) {
+              // 不能返回⾃身哦
+              throw new Error("不能返回⾃身。。。");
+            }
+            if (x instanceof MyPromise) {
+              // 如果返回值是Promise
+              // 如果返回值是promise对象，返回值为成功，新promise就是成功
+              // 如果返回值是promise对象，返回值为失败，新promise就是失败
+              // 谁知道返回的promise是失败成功？只有then知道
+              x.then(resolve, reject);
+            } else {
+              // ⾮Promise就直接成功
+              resolve(x);
+            }
+          } catch (err) {
+            // 处理报错
+            reject(err);
+            throw new Error(err);
+          }
+        });
+      };
+      if (this.PromiseState === "fulfilled") {
+        // 如果当前为成功状态，执⾏第⼀个回调
+        resolvePromise(onFulfilled);
+      } else if (this.PromiseState === "rejected") {
+        // 如果当前为失败状态，执⾏第⼆个回调
+        resolvePromise(onRejected);
+      } else if (this.PromiseState === "pending") {
+        // 如果状态为待定状态，暂时保存两个回调
+        // 如果状态为待定状态，暂时保存两个回调
+        this.onFulfilledCallbacks.push(resolvePromise.bind(this, onFulfilled));
+        this.onRejectedCallbacks.push(resolvePromise.bind(this, onRejected));
+      }
+    });
+    // 返回这个包装的Promise
+    return thenPromise;
+  }
 
-  // 输出内容
-  let output = [arrs[0]];
+  static all(promises) {
+    const result = [];
+    let count = 0;
+    return new MyPromise((resolve, reject) => {
+      const addData = (index, value) => {
+        result[index] = value;
+        count++;
+        if (count === promises.length) resolve(result);
+      };
+      promises.forEach((promise, index) => {
+        if (promise instanceof MyPromise) {
+          promise.then(
+            (res) => {
+              addData(index, res);
+            },
+            (err) => reject(err)
+          );
+        } else {
+          addData(index, promise);
+        }
+      });
+    });
+  }
 
-  [strName, strSex, strRole, strTime].forEach((str, index) => {
-    output.push(str, arrs[index + 1] || "");
-  });
+  static race(promises) {
+    return new MyPromise((resolve, reject) => {
+      promises.forEach((promise) => {
+        if (promise instanceof MyPromise) {
+          promise.then(
+            (res) => {
+              resolve(res);
+            },
+            (err) => {
+              reject(err);
+            }
+          );
+        } else {
+          resolve(promise);
+        }
+      });
+    });
+  }
 
-  return output.join("");
-};
-
-let content = invite`诚挚邀 ${data.name}${data.sex}，作为 ${data.role} 领域优秀开发，参加${data.time}度FrontEnd前端技术大会。本次大会旨在为广大前端开发者提供一个交流、学习和展示的平台，共同探讨前端技术的最新趋势和发展方向。主办方：深圳市前端开发者协会`;
-
-console.log(content);
-// 诚挚邀 Naparte先生，作为 微前端 领域优秀开发，参加2023年12月13日度FrontEnd前端技术大会。本次大会旨在为广大前端开发者提供一个交流、学习和展示的平台，共同探讨前端技术的最新趋势和发展方向。主办方：深圳市前端
-// 开发者协会;
+  static any(promises) {
+    return new Promise((resolve, reject) => {
+      let count = 0;
+      promises.forEach((promise) => {
+        promise.then(
+          (val) => {
+            resolve(val);
+          },
+          (err) => {
+            count++;
+            if (count === promises.length) {
+              reject(new AggregateError("All promises were rejected"));
+            }
+          }
+        );
+      });
+    });
+  }
+}
