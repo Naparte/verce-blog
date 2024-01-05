@@ -39,7 +39,8 @@ function generateDirectoryTree(directoryPath) {
     const fileName = path.basename(file, ".md");
     currentNode.push({
       text: fileName,
-      link: file.replace(".md", ""),
+      // replace 为了让 上一页 和 下一页 能够识别
+      link: "/" + file.replace(".md", "").replace(/\\/g, "/"),
     });
   }
 
@@ -67,7 +68,9 @@ function getFirstItemLink(treeArr) {
   return getFirstItemLink(firstitem.items);
 }
 
-export const nav = NavigationBar.map((item) => {
+// slice 临时隐藏一下面试相关内容
+
+export const nav = NavigationBar.slice(0, -1).map((item) => {
   if (item.link) {
     return item;
   }
