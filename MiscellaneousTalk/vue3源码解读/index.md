@@ -57,4 +57,4 @@ onStateChanged (()=>{ view = render(state) })
 
 - Vue 2.x 中的虚拟 DOM 是全量对比的模式，而到了 Vue 3.0 开始，新增了静态标记（PatchFlag）
 - Vue3 在模板编译阶段 用 hoisted、openBlock 进行 静态提升；由 Vue2 的 vdom 全量对比改成只对比修改过的 dom
-- ![hoisted、openBlock](./尤雨溪系列/imgs/hoisted.jpg)
+- ![hoisted、openBlock](./imgs/hoisted.jpg)

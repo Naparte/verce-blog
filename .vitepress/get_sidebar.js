@@ -39,7 +39,7 @@ function generateDirectoryTree(directoryPath) {
     const fileName = path.basename(file, ".md");
     currentNode.push({
       text: fileName,
-      // replace 为了让 上一页 和 下一页 能够识别
+      // replace \\ 为了让 上一页 和 下一页 能够识别
       link: "/" + file.replace(".md", "").replace(/\\/g, "/"),
     });
   }
