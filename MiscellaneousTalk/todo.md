@@ -47,6 +47,8 @@
 ## 你不知道的 JavaScript
 
 - https://www.ruanyifeng.com/blog/2014/12/unicodejavascript.html
+- https://www.mulingyuer.com/archives/838/
+- 规范整理：https://262.ecma-international.org/
 
 ## React
 

@@ -1,6 +1,6 @@
-## Vue3 概览
+# Vue3
 
-> 目录说明
+## Vue3 仓库目录概览
 
 | 包名                 | 描述                                                                           |
 | -------------------- | ------------------------------------------------------------------------------ |
@@ -14,6 +14,30 @@
 | @vue/compiler-ssr    | Vue.js 编译器的服务器端渲染（SSR）版本包，将模板编译为服务器端可执行的渲染函数 |
 | @vue/test-utils      | Vue.js 的测试工具包，用于编写和运行单元测试和集成测试                          |
 | @vue/use             | Vue.js 的 Composition API 的实现包，用于支持组合式开发                         |
+
+## @vue/shared 包概览
+
+| 文件名              | 描述                                           |
+| ------------------- | ---------------------------------------------- |
+| codeframe.ts        | 代码框架生成工具                               |
+| domAttrConfig.ts    | DOM 属性配置                                   |
+| domTagConfig.ts     | DOM 标签配置                                   |
+| escapeHtml.ts       | HTML 转义工具函数                              |
+| general.ts          | 通用工具函数                                   |
+| globalsAllowList.ts | 全局变量白名单配置                             |
+| index.ts            | 入口文件，导出了@vue/shared 包中的各种工具函数 |
+| looseEqual.ts       | 宽松相等性检查工具函数                         |
+| makeMap.ts          | 创建映射表的工具函数                           |
+| normalizeProp.ts    | 属性规范化工具函数                             |
+| patchFlags.ts       | 补丁标记常量定义                               |
+| shapeFlags.ts       | 节点类型标记常量定义                           |
+| slotFlags.ts        | 插槽标记常量定义                               |
+| toDisplayString.ts  | 将值转换为显示字符串的工具函数                 |
+| typeUtils.ts        | 类型相关的工具函数                             |
+
+`@vue/shared`这些文件主要提供了不同的工具函数和配置，用于支持 Vue.js 的核心功能和特性的实现。
+
+## Vue 设计初衷
 
 > 响应式想要解决的问题
 
@@ -39,7 +63,7 @@ onStateChanged (()=>{ view = render(state) })
 
 - vue 实现了追踪变量的依赖（称之为追踪器），然后执行对应的“副作用”逻辑
 
-## vue2 和 vue3 的不同
+## Vue2 和 Vue3 的不同
 
 1. 双向数据绑定原理不同
 2. 是否支持碎片
@@ -57,4 +81,5 @@ onStateChanged (()=>{ view = render(state) })
 
 - Vue 2.x 中的虚拟 DOM 是全量对比的模式，而到了 Vue 3.0 开始，新增了静态标记（PatchFlag）
 - Vue3 在模板编译阶段 用 hoisted、openBlock 进行 静态提升；由 Vue2 的 vdom 全量对比改成只对比修改过的 dom
-- ![hoisted、openBlock](./imgs/hoisted.jpg)
+
+![hoisted、openBlock](./imgs/hoisted.jpg)
