@@ -49,6 +49,7 @@
 - https://www.ruanyifeng.com/blog/2014/12/unicodejavascript.html
 - https://www.mulingyuer.com/archives/838/
 - 规范整理：https://262.ecma-international.org/
+- 监控劫持 https://developer.mozilla.org/zh-CN/docs/Web/Security/Subresource_Integrity
 
 ## React
 
