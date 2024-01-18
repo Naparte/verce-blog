@@ -331,6 +331,10 @@
 
 4. 实现一个 event emitter
 
+## 富途 2023 面经
+
+- https://zhuanlan.zhihu.com/p/467461900
+
 ```javascript
 const func1 = async () => {
   console.log(1);
