@@ -1,0 +1,6 @@
+[submodule "thirdpartys/typescript-tutorial"]
+	path = thirdpartys/typescript-tutorial
+	url = git@github.com:wangdoc/typescript-tutorial.git
+[submodule "thirdpartys/es6tutorial"]
+	path = thirdpartys/es6tutorial
+	url = git@github.com:ruanyf/es6tutorial.git

@@ -18,6 +18,10 @@ export const NavigationBar = [
     path: "MiscellaneousTalk",
   },
   {
+    text: "电子书",
+    path: "Books",
+  },
+  {
     text: "Interview",
     path: "InterviewQuestions",
   },

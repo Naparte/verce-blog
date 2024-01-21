@@ -5,8 +5,14 @@
     "vitepress": "^1.0.0-rc.22"
   },
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:thirdpart": "node ./script/before_build.js",
+    "docs:dev": "npm run docs:thirdpart && vitepress dev",
+    "docs:build": "npm run docs:thirdpart && vitepress build",
+    "docs:preview": "npm run docs:thirdpart && vitepress preview",
+    "update-submodules": "git submodule update --init --recursive"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "js-yaml": "^4.1.0"
   }
 }
