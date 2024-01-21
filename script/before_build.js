@@ -16,15 +16,17 @@ async function readAndParseYmlFile(filePath) {
 const files = [
   {
     sourceDir: "./thirdpartys/typescript-tutorial/docs",
-    depYml: await readAndParseYmlFile(
-      "./thirdpartys/typescript-tutorial/chapters.yml"
-    ),
+    depYml: await readAndParseYmlFile("./Books/P1 阮一峰的TS教程/chapters.yml"),
     targetDir: "./Books/P1 阮一峰的TS教程",
   },
-  //   {
-  //     sourceDir: "./Books/es6tutorial/docs",
-  //     targetDir: "./Books/ES6",
-  //   },
+  {
+    sourceDir: "./thirdpartys/es6tutorial/docs",
+    depYml: await readAndParseYmlFile(
+      "./Books/P2 阮一峰的ES6教程/chapters.yml"
+    ),
+
+    targetDir: "./Books/P2 阮一峰的ES6教程",
+  },
 ];
 
 // 异步复制目录及其内容的函数

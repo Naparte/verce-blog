@@ -9,7 +9,7 @@ export default defineConfig({
   base: "/verce-blog/",
   outDir: "./dist",
   lastUpdated: false,
-
+  ignoreDeadLinks: true, // 当设置为 true 时，VitePress 不会因为死链而导致构建失败
   head: [["link", { rel: "icon", href: "./favicon.ico" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
