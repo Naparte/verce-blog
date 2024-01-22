@@ -13,13 +13,14 @@ export const NavigationBar = [
     text: "每日·壹库",
     path: "Toolkit",
   },
+
+  {
+    text: "eBook",
+    path: "Books",
+  },
   {
     text: "阅",
     path: "MiscellaneousTalk",
-  },
-  {
-    text: "电子书",
-    path: "Books",
   },
   {
     text: "Interview",

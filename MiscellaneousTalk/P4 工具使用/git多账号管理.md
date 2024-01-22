@@ -2,14 +2,16 @@
 
 - 解决问题：同一台电脑，N 个 github 账号同时存在，需要对应 N 个 github 账号的 SSH key
 
-> 1、运行 git Bash 客户端，输入如下代码：
+## 步骤
+
+1. 运行 git Bash 客户端，输入如下代码：
 
 ```shell
 $ cd ~/.ssh
 $ ls
 ```
 
-2、创建一个 SSH key
+2. 创建一个 SSH key
 
 ```shell
 $ ssh-keygen -t rsa -C "your_email@example.com" -f your_ras_name
@@ -21,13 +23,13 @@ $ ssh-keygen -t rsa -C "your_email@example.com" -f your_ras_name
 # -f 指定密钥文件存储文件名 ，多个账号必须区分，默认是 id_rsa 会重名
 ```
 
-> 3、添加你的 SSH key 到 github 上面去
+3. 添加你的 SSH key 到 github 上面去
 
 ```shell
 $ clip < ~/.ssh/id_rsa.pub
 ```
 
-> 4、配置 config 文件
+4. 在.ssh 文件夹中手动创建 config 文件
 
 ```shell
 # 配置
@@ -65,14 +67,14 @@ User hzh
 
 ```
 
-- 测试连接
+5. 测试连接
 
 ```shell
 $ ssh -T git@naparte
 # You've successfully authenticated, but GitHub does not provide shell access 提示这个表示成功了
 ```
 
-> 6、拉取项目
+6. 拉取项目
 
 ```shell
 git clone git@github.com:naparte/yourblog.git
@@ -80,7 +82,7 @@ git clone git@github.com:naparte/yourblog.git
 git clone git@naparte:naparte/yourblog.git
 ```
 
-- 解决老项目 git pull 需要输入密码的问题
+8. 解决老项目 git pull 需要输入密码的问题
 
 ```shell
 # 一是直接修改远程仓库的URL
@@ -90,3 +92,7 @@ git remote set-url origin git@Host别名:gitrepo
 git remote rm origin
 git remote add origin git@Host别名:gitrepo
 ```
+
+## 参考文献
+
+- [Git 多账号管理](https://juejin.cn/post/6909675192532860941#heading-6)
