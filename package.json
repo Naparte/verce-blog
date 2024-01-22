@@ -1,13 +1,14 @@
 {
   "type": "module",
   "devDependencies": {
-    "glob": "^10.3.10",
     "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
     "js-yaml": "^4.1.0",
+    "nodemon": "^3.0.3",
     "vitepress": "^1.0.0-rc.22"
   },
   "scripts": {
-    "dev": "nodemon --watch './' --ext 'md' --exec 'docs:dev'",
+    "dev": "nodemon --watch './' --ext 'md' --exec 'yarn docs:dev'",
     "docs:thirdpart": "node ./script/before_build.js",
     "docs:dev": " vitepress dev",
     "docs:build": "npm run docs:thirdpart && vitepress build",
