@@ -331,6 +331,140 @@
 
 4. 实现一个 event emitter
 
+## 面经 - 剪映
+
+1. 2min 自我介绍怎么学习前端的
+2. 数组 reduce 和 reduceRight 用法和区别
+3. 手写代码 1
+
+```js
+    实现一个方法 splitArr ，接收两个参数，一个数组arr、一个数字a; 返回按a长度切割成二维数组（只能基于数组 reduce 方法实现）
+    比如
+    sprintArr([1,2,3,4,5,6,7,8], 4) // return [[1,2,3,4], [5,6,7,8]];
+    sprintArr([1,2,3,4,5,6,7,8], 3) // return [[1,2,3], [4,5,6], [7,8]];
+    sprintArr([1,2,3,4,5,6,7,8], 7) // return [[1,2,3,4,5,6,7], [1]];
+```
+
+4. 说下 Promise.all 和 Promise.race 和 Promise.allSettled 和 Promise.any 具体区别
+
+5. 看代码将输出
+
+```js
+const arr = [
+  new Promise.reject(-1),
+  new Promise((res) => {
+    setTimeout(
+      () => {
+        res(true);
+      },
+      500,
+      "quick"
+    );
+  }),
+  new Promise((res, rej) => {
+    setTimeout(
+      () => {
+        rej(false);
+      },
+      1000,
+      "slow"
+    );
+  }),
+];
+
+Promise.race(arr).then((res) => console.log(res));
+Promise.any(arr).then((res) => console.log(res));
+Promise.allSettled(arr).then((res) => console.log(res));
+```
+
+6. 宏任务、微任务
+7. 看代码输出
+
+```js
+  window.requestIdleCallback(() => {
+    console.log(-1);
+  }, { timeout: 2000 })
+  window.requestAnimationFrame(() => {
+    console.log(0);
+  })
+  async async1 = () => {
+    console.log(1);
+    await async2();
+    console.log(3)
+  }
+  async async2 = () => {
+    console.log(2);
+  }
+  async1();
+  setTimeout(() => console.log(4), 0);
+  new Promise((resolve) => {
+    resolve();
+    console.log(5;
+  }).then(() => {
+    console.log(6);
+    Promise.resole().then(() => console.log(7))
+  })
+  console.log(8);
+```
+
+8. CSS 自定义样式了解过吗？说说怎么用？inset？
+9. 手写题：用 css 实现一个三角形
+10. 黏性布局怎么用
+11. 性能优化展开说说做了哪些
+12. 解释强、协缓存，缓存怎么做
+13. 前端存储有哪些？
+14. serviceWorker 讲一下
+15. 实现一下 TypeScript 里面的内置类型
+
+```ts
+  Pick类型： Pick<T, K> = ? //  比如有一个inerface A， 需要取A里面的name或者age， Pick<A, 'name' | 'age'>
+  Includes： Includes<T, K> = ? //  判断类型中是否拥有指定的类型， Includes<['a', 'b', 'c'], 'a' | 'b'>
+```
+
+16. node 用过？ 说一下洋葱圈模型？
+17. 出了一道实现 app.use()中间件的手写题目，大概率想看你中间件的原理，怎么写一个 node 中间件.说不了解，就换题目了
+18. 聊一下前端安全，怎么防止恶性脚本
+19. 除了转义之外？如果中间人服务器拦截用户的 html，往里面写入了 script 标签，然后返回给用户浏览器直接解析了，这种怎么防？
+    -- 没了解，面试官提示 CSP ，即 浏览器内容安全策略
+20. CSP 具体怎么用，可以做些什么？
+21. git rebase 简述
+22. 手写命令：假设有 a,b,c,d,e 五个 commit，现在想要把 d 的 commit 记录删掉，其他保留，怎么写命令（commitHash 你可以用 a、b、c 替代）？
+23. 手写题，下面 React 这个组件有什么问题，请指出并改正
+
+```js
+const Com = (props) => {
+  const { A = [] } = props;
+  const [B, setB] = useState([]);
+  useEffect(() => {
+    // some logic
+    setB(A);
+  }, [A]);
+};
+```
+
+- 怎么做包管理，如果有业务的小伙伴引入新的包导致 chunk 变大，怎么处理
+
+24. monorepo、pnpm 了解过吗？
+25. 什么是幽灵依赖？怎么解决幽灵依赖的问题？
+26. 强链接、软连接是什么
+27. 算法题 1： 实现二叉树的蛇形遍历，视觉效果有点像蛇，从下往上盘旋上升，比如
+
+```js
+  二叉树如下：
+       1
+     2   3
+    4 5 6 7
+  输出 [7,6,5,4,2,3,1]
+
+             1
+        2           3
+     4    5      6    7
+    8 9 10 11 12 13 14 15
+  输出 [15,14,13,12,11,10,9,8,4,5,6,7,3,2,1]
+```
+
+28. 算法题 2： 有效果的括号 {}()[]
+
 ## 富途 2023 面经
 
 - https://zhuanlan.zhihu.com/p/467461900
