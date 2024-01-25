@@ -6,7 +6,7 @@ import { sidebar, nav } from "./get_sidebar";
 export default defineConfig({
   title: "Naparte Blog",
   description: "A VitePress Site",
-  base: "/verce-blog/",
+  base: "/",
   outDir: "./dist",
   lastUpdated: false,
   ignoreDeadLinks: true, // 当设置为 true 时，VitePress 不会因为死链而导致构建失败
