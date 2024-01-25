@@ -83,4 +83,4 @@
 - [ 每个程序员都应该知道的东西，不单独指前端开发 ](https://github.com/mtdvio/every-programmer-should-know)
 - [ JS 的数据结构于算法 ](https://github.com/trekhleb/javascript-algorithms)
 - [ node 最佳实践 ](https://github.com/goldbergyoni/nodebestpractices)
-- [Interview](../../verce-blog/InterviewQuestions/面试相关/1.常见问题.html)
+- [Interview](../../InterviewQuestions/面试相关/1.常见问题.html)

@@ -351,7 +351,7 @@
 
 ```js
 const arr = [
-  new Promise.reject(-1),
+  Promise.reject(-1),
   new Promise((res) => {
     setTimeout(
       () => {
@@ -381,30 +381,33 @@ Promise.allSettled(arr).then((res) => console.log(res));
 7. 看代码输出
 
 ```js
-  window.requestIdleCallback(() => {
+window.requestIdleCallback(
+  () => {
     console.log(-1);
-  }, { timeout: 2000 })
-  window.requestAnimationFrame(() => {
-    console.log(0);
-  })
-  async async1 = () => {
-    console.log(1);
-    await async2();
-    console.log(3)
-  }
-  async async2 = () => {
-    console.log(2);
-  }
-  async1();
-  setTimeout(() => console.log(4), 0);
-  new Promise((resolve) => {
-    resolve();
-    console.log(5;
-  }).then(() => {
-    console.log(6);
-    Promise.resole().then(() => console.log(7))
-  })
-  console.log(8);
+  },
+  { timeout: 2000 }
+);
+window.requestAnimationFrame(() => {
+  console.log(0);
+});
+async function async1() {
+  console.log(1);
+  await async2();
+  console.log(3);
+}
+async function async2() {
+  console.log(2);
+}
+async1();
+setTimeout(() => console.log(4), 0);
+new Promise((resolve) => {
+  resolve();
+  console.log(5);
+}).then(() => {
+  console.log(6);
+  Promise.resolve().then(() => console.log(7));
+});
+console.log(8);
 ```
 
 8. CSS 自定义样式了解过吗？说说怎么用？inset？
