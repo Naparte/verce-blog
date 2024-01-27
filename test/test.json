@@ -1,0 +1,441 @@
+{
+  "name": "中阶",
+  "children": [
+    {
+      "name": "研发链路（工程化基础）",
+      "children": [
+        {
+          "name": "脚手架 (Scaffold)",
+          "children": [
+            {
+              "name": "CLI（command-line interface）",
+              "children": [
+                { "name": "commander", "article": [] },
+                { "name": "inquirer", "article": [] },
+                { "name": "ora", "article": [] },
+                { "name": "chalk", "article": [] },
+                { "name": "emoji" }
+              ]
+            },
+            {
+              "name": "初始化（Boilerplate）",
+              "children": [
+                { "name": "create-react-app", "article": [] },
+                { "name": "umi", "article": [] },
+                { "name": "vue-cli", "article": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "包管理",
+          "children": [
+            { "name": "NPM", "article": [], "children": [] },
+            { "name": "Yarn", "article": [], "children": [] }
+          ]
+        },
+        {
+          "name": "开发",
+          "children": [
+            { "name": "dev-server", "article": [], "children": [] },
+            { "name": "hot-reload", "article": [], "children": [] },
+            { "name": "mock", "article": [], "children": [] },
+            { "name": "proxy", "article": [], "children": [] }
+          ]
+        },
+        {
+          "name": "构建",
+          "children": [
+            {
+              "name": "构建器",
+              "children": [
+                { "name": "gulp", "article": [] },
+                { "name": "Webpack", "article": [] },
+                { "name": "snowpack", "article": [] },
+                { "name": "vite", "article": [] }
+              ]
+            },
+            {
+              "name": "JS 编译",
+              "children": [
+                { "name": "tsc" },
+                { "name": "babel", "article": [] },
+                { "name": "esbuild", "article": [] }
+              ]
+            },
+            {
+              "name": "CSS 编译",
+              "children": [
+                { "name": "Sass", "article": [] },
+                { "name": "Less", "article": [] },
+                { "name": "Stylus", "article": [] },
+                { "name": "PostCSS", "article": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "代码规范",
+          "children": [
+            {
+              "name": "业界流行规范",
+              "children": [
+                { "name": "Airbnb Style Guide", "article": [] },
+                { "name": "StandardJS", "article": [] },
+                { "name": "Google Style Guide", "article": [] },
+                { "name": "阿里巴巴前端规约", "article": [] }
+              ]
+            },
+            {
+              "name": "CSS 命名规范",
+              "children": [
+                { "name": "BEM", "article": [] },
+                { "name": "OOCSS", "article": [] },
+                { "name": "SMACSS", "article": [] }
+              ]
+            },
+            {
+              "name": "工具",
+              "children": [
+                { "name": "ESLint", "article": [] },
+                { "name": "stylelint", "article": [] },
+                { "name": "commitlint", "article": [] },
+                { "name": "Prettier（代码格式化）", "article": [] },
+                { "name": "husky 和 lint-staged（流程控制）", "article": [] },
+                {
+                  "name": "F2ELint（阿里前端规约配套的Lint工具）",
+                  "article": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "测试",
+          "children": [
+            {
+              "name": "单元测试",
+              "children": [
+                { "name": "jasmine", "article": [] },
+                { "name": "mocha", "article": [] },
+                { "name": "jest", "article": [] },
+                { "name": "enzyme", "article": [] }
+              ]
+            },
+            {
+              "name": "E2E 测试",
+              "children": [
+                { "name": "Selenium" },
+                { "name": "karma", "article": [] },
+                { "name": "cypress", "article": [] },
+                { "name": "Puppeteer", "article": [] },
+                { "name": "Appium", "article": [] },
+                { "name": "WebDriver", "article": [] },
+                { "name": "ChromeDriver", "article": [] },
+                { "name": "UIRecord", "article": [] },
+                { "name": "PhantomJs", "article": [] }
+              ]
+            },
+            { "name": "覆盖率测试", "children": [{ "name": "istanbul" }] }
+          ]
+        },
+        {
+          "name": "CI/CD",
+          "children": [
+            { "name": "TravisCI", "article": [], "children": [] },
+            { "name": "CircleCI", "article": [], "children": [] },
+            { "name": "Codecov", "article": [], "children": [] },
+            { "name": "Jenkins", "article": [], "children": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "库",
+      "children": [
+        { "name": "原则", "children": [{ "name": "DRY", "children": [] }] },
+        {
+          "name": "CSS",
+          "article": [],
+          "children": [
+            {
+              "name": "作用域",
+              "children": [
+                { "name": "scoped css" },
+                { "name": "css modules" },
+                { "name": "css-in-js", "article": [] }
+              ]
+            },
+            {
+              "name": "样式库",
+              "children": [
+                { "name": "normalize.css", "article": [] },
+                { "name": "Bootstrap", "article": [] },
+                { "name": "Tailwind" },
+                { "name": "Bulma", "article": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "JS",
+          "children": [
+            {
+              "name": "工具类",
+              "children": [
+                { "name": "history", "article": [] },
+                { "name": "path-to-regexp", "article": [] },
+                { "name": "lodash", "article": [] },
+                { "name": "fastclick", "article": [] },
+                { "name": "date-fns", "article": [] }
+              ]
+            },
+            {
+              "name": "网络",
+              "article": [],
+              "children": [
+                { "name": "axios", "article": [] },
+                { "name": "got", "article": [] }
+              ]
+            },
+            {
+              "name": "数据流",
+              "children": [
+                { "name": "rxjs", "article": [] },
+                { "name": "Immer", "article": [] }
+              ]
+            },
+            { "name": "模板引擎", "children": [] }
+          ]
+        },
+        {
+          "name": "动画",
+          "article": [],
+          "children": [
+            { "name": "CSS 动画", "article": [], "children": [] },
+            { "name": "JS 动画", "article": [], "children": [] },
+            { "name": "Lottie", "article": [], "children": [] }
+          ]
+        },
+        {
+          "name": "设计规范/组件",
+          "children": [
+            { "name": "Material Design", "article": [], "children": [] },
+            {
+              "name": "Apple Human Interface Guidelines",
+              "article": [],
+              "children": []
+            },
+            { "name": "Ant Design", "article": [], "children": [] },
+            { "name": "WeUI", "article": [], "children": [] },
+            { "name": "mini-ali-ui", "article": [], "children": [] }
+          ]
+        },
+        {
+          "name": "文档",
+          "children": [
+            { "name": "jsdoc", "article": [], "children": [] },
+            { "name": "bisheng", "article": [], "children": [] },
+            { "name": "dumi", "article": [], "children": [] },
+            { "name": "Storybook", "article": [], "children": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "框架",
+      "children": [{ "name": "React", "article": [], "children": [] }]
+    },
+    {
+      "name": "性能优化",
+      "children": [
+        {
+          "name": "指标",
+          "children": [
+            {
+              "name": "真实指标",
+              "children": [
+                { "name": "First Contentful Paint (FCP)", "article": [] },
+                { "name": "Largest Contentful Paint (LCP)", "article": [] },
+                { "name": "First Input Delay (FID)", "article": [] },
+                { "name": "Cumulative Layout Shift (CLS)", "article": [] }
+              ]
+            },
+            {
+              "name": "实验室指标",
+              "children": [
+                { "name": "Total Blocking Time (TBT)", "article": [] },
+                { "name": "Time to Interactive (TTI)", "article": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "评估工具",
+          "children": [
+            { "name": "Chrome DevTools", "article": [], "children": [] },
+            { "name": "LightHouse", "article": [], "children": [] },
+            { "name": "PageSpeed Insights", "article": [], "children": [] },
+            { "name": "WebPageTest", "article": [], "children": [] }
+          ]
+        },
+        {
+          "name": "优化方案",
+          "children": [
+            {
+              "name": "压缩",
+              "children": [
+                { "name": "代码压缩", "article": [] },
+                { "name": "文本压缩（gzip、Brotli、Zopfli等）" },
+                { "name": "Tree-shaking", "article": [] },
+                { "name": "Code-splitting", "article": [] }
+              ]
+            },
+            {
+              "name": "图片优化",
+              "children": [
+                { "name": "小图优化（css sprite、iconfont、dataURI、svg）" },
+                { "name": "图片格式选择" },
+                { "name": "压缩（如tinypng）" },
+                { "name": "响应式", "article": [] }
+              ]
+            },
+            {
+              "name": "加载策略",
+              "children": [
+                { "name": "懒加载" },
+                { "name": "DNS预解析、预加载、预渲染" },
+                { "name": "离线化（ServiceWorker、AppCache、离线包等）" },
+                { "name": "HTTP缓存", "article": [] },
+                {
+                  "name": "数据缓存（localStorage、sessionStorage）",
+                  "article": []
+                },
+                { "name": "资源加载（顺序、位置、异步等）", "article": [] },
+                { "name": "请求合并" },
+                { "name": "HTTP2" },
+                { "name": "CDN" },
+                { "name": "服务端渲染" }
+              ]
+            },
+            {
+              "name": "执行渲染",
+              "children": [
+                { "name": "CSS代码优化（选择器、启用GPU、避免表达式等）" },
+                { "name": "使用requestAnimationFrame实现视觉变化" },
+                { "name": "降低复杂度或使用Web Worker" },
+                { "name": "避免大型、复杂的布局和布局抖动" },
+                { "name": "简化绘制复杂度、减少绘制区域" },
+                { "name": "输入处理程序防抖" }
+              ]
+            },
+            {
+              "name": "感官体验优化",
+              "children": [
+                { "name": "骨架屏" },
+                { "name": "Snapshot" },
+                { "name": "Loading" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "工作原理",
+      "children": [
+        {
+          "name": "浏览器",
+          "children": [
+            { "name": "DOM Tree、CSSOM", "children": [] },
+            { "name": "渲染、绘制", "children": [] },
+            { "name": "会话", "children": [] },
+            { "name": "事件循环", "children": [] },
+            { "name": "垃圾回收", "children": [] },
+            { "name": "Webkit 深入", "children": [] },
+            {
+              "name": "引擎",
+              "children": [
+                { "name": "Trident" },
+                { "name": "Gecko" },
+                { "name": "Presto" },
+                { "name": "Webkit", "article": [] },
+                { "name": "Webkit2" },
+                { "name": "Blink" },
+                { "name": "Chromium", "article": [] }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "JavaScript引擎",
+          "children": [
+            { "name": "V8", "article": [], "children": [] },
+            { "name": "SpiderMonkey", "children": [] },
+            { "name": "JavaScriptCore", "children": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "综合能力",
+      "children": [
+        {
+          "name": "知识管理",
+          "children": [
+            { "name": "Markdown", "article": [], "children": [] },
+            { "name": "脑图", "children": [] },
+            { "name": "wiki", "children": [] },
+            { "name": "GitBook", "article": [], "children": [] }
+          ]
+        },
+        {
+          "name": "软件工程",
+          "children": [
+            { "name": "过程模型", "children": [] },
+            { "name": "需求分析 ", "children": [] },
+            { "name": "概念设计", "children": [] },
+            { "name": "体系结构设计", "children": [] },
+            {
+              "name": "项目管理",
+              "article": [],
+              "children": [
+                { "name": "立项管理" },
+                { "name": "整体管理" },
+                { "name": "范围管理" },
+                { "name": "进度管理" },
+                { "name": "成本管理" },
+                { "name": "质量管理" },
+                { "name": "人力资源管理" },
+                { "name": "沟通管理" },
+                { "name": "风险管理" },
+                { "name": "采购管理" },
+                { "name": "合同管理" },
+                { "name": "变更管理" },
+                { "name": "战略管理" },
+                { "name": "项目集和项目组合管理" },
+                { "name": "流程管理" },
+                { "name": "知识管理" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "交互设计",
+          "children": [
+            { "name": "交互原型", "children": [] },
+            { "name": "视觉还原", "children": [] }
+          ]
+        },
+        {
+          "name": "开源项目",
+          "children": [
+            { "name": "GitHub", "article": [], "children": [] },
+            { "name": "OpenJS", "article": [], "children": [] },
+            { "name": "Apache", "article": [], "children": [] }
+          ]
+        }
+      ]
+    }
+  ]
+}
