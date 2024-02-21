@@ -58,6 +58,11 @@
 - Formik
 - React Hook Form https://www.react-hook-form.com/
 
+## 方案
+
+- 换肤
+- PDF 预览
+
 ## 待读
 
 - [ 对于非常规需求，如何在业务中巧妙的使用奇技淫巧 ](https://github.com/tnfe/awesome-blackmagic)

@@ -538,6 +538,57 @@ foow()
 foow()  // 1、2、3 秒各输出一个结果
 ```
 
+## shoppe
+
+1. 了解 http？说一下 HTTPs 认证过程，
+2. refrerence，host，origin 有什么区别
+3. mysql 知道怎么操作数据库么
+4. ngnix 如何配置 304
+5. 看代码输出
+
+```js
+function Person() {
+  this.name = "a";
+}
+
+Person.prototype.id = "di";
+Person.prototype.name = "name";
+
+let p = new Person();
+
+for (let key in p) {
+  console.log(p[key]); // 打印几次
+}
+
+delete p.name;
+
+for (let key in p) {
+  console.log(p[key]); // 打印几次
+}
+```
+
+```js
+new Promise((resole, reject) => {
+  console.log(1);
+
+  resole(true);
+
+  console.log(2);
+
+  throw new Error("error");
+
+  reject();
+})
+  .catch((err) => {
+    console.log(err);
+  })
+  .then(() => {
+    console.log(true);
+  });
+```
+
+7. 写一个请求并发控制，同时只有 5 个并发请求，同时可以取消任意一个
+
 ## leetcode 已处理
 
 - 每次上 1 个台阶或 2 个台阶，求上 n 楼的方案问题

@@ -36,3 +36,4 @@
 
 - https://github.com/yangshun/front-end-interview-handbook
 - https://www.frontendinterviewhandbook.com/zh/javascript-questions
+- [Cracking the Coding Interview](https://github.com/F8F-1BearCat/CtCI-6th-Edition-CN/blob/master/README.md)
