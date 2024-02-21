@@ -4,97 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .Article {
+        overflow: hidden;
+      }
+
+      .Article > li {
+        float: left;
+        margin: 0 10px -9999px 0;
+        padding-bottom: 9999px;
+        background: #4577dc;
+        width: 200px;
+        color: #fff;
+      }
+
+      .Article > li > p {
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
-    <my-info></my-info>
-
-    <template id="my-info-template">
-      <script>
-        debugger;
-        window.a = 10;
-        console.log(window);
-      </script>
-      <style>
-        :host {
-          display: flex;
-          align-items: center;
-          width: 450px;
-          height: 180px;
-          background-color: #d4d4d4;
-          border: 1px solid #d5d5d5;
-          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-          border-radius: 3px;
-          overflow: hidden;
-          padding: 10px;
-          box-sizing: border-box;
-          font-family: "Poppins", sans-serif;
-        }
-        .image {
-          flex: 0 0 auto;
-          width: 160px;
-          height: 160px;
-          vertical-align: middle;
-          border-radius: 5px;
-        }
-        .container {
-          box-sizing: border-box;
-          padding: 20px;
-          height: 160px;
-        }
-        .container > .name {
-          font-size: 20px;
-          font-weight: 600;
-          line-height: 1;
-          margin: 0;
-          margin-bottom: 5px;
-        }
-        .container > .email {
-          font-size: 12px;
-          opacity: 0.75;
-          line-height: 1;
-          margin: 0;
-          margin-bottom: 15px;
-        }
-        .container > .button {
-          padding: 10px 25px;
-          font-size: 12px;
-          border-radius: 5px;
-          text-transform: uppercase;
-        }
-      </style>
-      <img
-        src="https://github.com/Naparte/verce-blog/blob/main/avatar.png?raw=true"
-        width="40"
-        class="image"
-      />
-      <div class="container">
-        <p class="name">Name: Naparte template</p>
-        <p class="email">Email: Naparte_template@163.com</p>
-        <button class="button">Follow</button>
-      </div>
-    </template>
+    <ul class="Article">
+      <li class="js-article-item">
+        <p>
+          一家将客户利益置于首位的经纪商，
+          为客户提供专业的交易工具一家将客户利益置于首位的经纪商，
+          为客户提供专业的交易工具一家将客户利益置于首位的经纪商，
+          为客户提供专业的交易工具一家将客户利益置于首位的经纪商，为客户提供专业的交易工具
+        </p>
+      </li>
+      <li class="js-article-item">
+        <p>
+          一家将客户利益置于首位的经纪商，为客户提供专业的交易工具
+          一家将客户利益置于首位的经纪商，为客户提供专业的交易工具
+        </p>
+      </li>
+      <li class="js-article-item">
+        <p>一家将客户利益置于首位的经纪商</p>
+      </li>
+    </ul>
   </body>
-  <script>
-    class MyInfo extends HTMLElement {
-      constructor() {
-        super();
-
-        var templateElem = document.getElementById("my-info-template");
-        var content = templateElem.content.cloneNode(true);
-
-        //  :host CSS 伪类选择内部使用了该 CSS 的影子 DOM（shadow DOM） 的影子宿主（shadow host）——换句话说，这允许你从其影子 DOM 内部选择自定义元素
-        // https://developer.mozilla.org/zh-CN/docs/Web/CSS/:host
-        const shadowRoot = this.attachShadow({ mode: "open" });
-        shadowRoot.appendChild(content);
-
-        // 添加操作事件
-        this.$button = shadowRoot.querySelector("button");
-        this.$button.addEventListener("click", () => {
-          alert("click");
-        });
-      }
-    }
-
-    window.customElements.define("my-info", MyInfo);
-  </script>
 </html>
