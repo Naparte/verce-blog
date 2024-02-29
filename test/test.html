@@ -3,45 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CSS Variables Demo</title>
+    <!-- 定义全局CSS变量 -->
+    <link id="themelink" rel="stylesheet" href="./default.css" />
     <style>
-      .Article {
-        overflow: hidden;
+      /* 使用CSS变量 */
+      body {
+        background-color: var(--primary-color);
+        color: var(--text-color);
       }
 
-      .Article > li {
-        float: left;
-        margin: 0 10px -9999px 0;
-        padding-bottom: 9999px;
-        background: #4577dc;
-        width: 200px;
-        color: #fff;
-      }
-
-      .Article > li > p {
-        padding: 10px;
+      h1 {
+        color: var(--secondary-color);
       }
     </style>
   </head>
   <body>
-    <ul class="Article">
-      <li class="js-article-item">
-        <p>
-          一家将客户利益置于首位的经纪商，
-          为客户提供专业的交易工具一家将客户利益置于首位的经纪商，
-          为客户提供专业的交易工具一家将客户利益置于首位的经纪商，
-          为客户提供专业的交易工具一家将客户利益置于首位的经纪商，为客户提供专业的交易工具
-        </p>
-      </li>
-      <li class="js-article-item">
-        <p>
-          一家将客户利益置于首位的经纪商，为客户提供专业的交易工具
-          一家将客户利益置于首位的经纪商，为客户提供专业的交易工具
-        </p>
-      </li>
-      <li class="js-article-item">
-        <p>一家将客户利益置于首位的经纪商</p>
-      </li>
-    </ul>
+    <h1>这是一个使用CSS变量的演示页面</h1>
+    <p>
+      主背景色使用了变量 --primary-color，文本颜色使用了变量
+      --text-color，标题颜色使用了变量 --secondary-color。
+    </p>
+    <button onclick="changeTheme()">切换主题</button>
   </body>
+
+  <script>
+    function changeTheme() {
+      let link = document.getElementById("themelink");
+
+      link.setAttribute(
+        "href",
+        link.href.includes("default.css") ? "test2.css" : "default.css"
+      );
+    }
+  </script>
 </html>

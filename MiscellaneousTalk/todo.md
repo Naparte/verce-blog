@@ -8,7 +8,6 @@
 - ramda
 - esbuild
 - spritesmith
--
 
 > vue
 
@@ -60,8 +59,7 @@
 
 ## 方案
 
-- 换肤
-- PDF 预览
+-
 
 ## 待读
 
