@@ -8,6 +8,7 @@
 - ramda
 - esbuild
 - spritesmith
+- babel-plugin-import
 
 > vue
 
