@@ -46,10 +46,9 @@
 
 ## 你不知道的 JavaScript
 
-- https://www.ruanyifeng.com/blog/2014/12/unicodejavascript.html
-- https://www.mulingyuer.com/archives/838/
-- 规范整理：https://262.ecma-international.org/
-- 监控劫持 https://developer.mozilla.org/zh-CN/docs/Web/Security/Subresource_Integrity
+- [Unicode 字符集 知识点 1](https://www.ruanyifeng.com/blog/2014/12/unicodejavascript.html)
+- [Unicode 字符集 知识点 2](https://www.mulingyuer.com/archives/838/)
+- [ECMA-262 规范整理](https://262.ecma-international.org/)
 
 ## React
 
@@ -64,27 +63,33 @@
 
 ## 待读
 
-- [ 对于非常规需求，如何在业务中巧妙的使用奇技淫巧 ](https://github.com/tnfe/awesome-blackmagic)
-- [ 前端开发小技巧 ](https://github.com/phuocng/frontend-tips)
-- [ 1KB 级别的小工具，更多看设计思想](https://github.com/xucz/awesome-1kb)
-- [ 对开源框架的学习](https://github.com/KieSun/awesome-frontend-source-interpretation)
-- [ 强烈建议学习 lodash 这种小而精的库 ](https://github.com/HeftyKoo/pocket-lodash)
-- [ 常看常新的 jQuery](https://github.com/JsAaron/jQuery)
+- [ 30s 一道题 ](https://github.com/30-seconds/30-seconds-of-code)
+- [ 技术 roadmap ](https://github.com/kamranahmedse/developer-roadmap)
+
+- [JS 代码整洁之道 ](https://github.com/ryanmcdermott/clean-code-javascript)
+- [ 前端技术书籍 ](https://github.com/jobbole/awesome-web-dev-books)
+- [ 计算机书籍 ](https://github.com/imarvinle/awesome-cs-books)
+- [ Every Programmer Should Know ](https://github.com/mtdvio/every-programmer-should-know)
+- [ JS 的数据结构于算法 ](https://github.com/trekhleb/javascript-algorithms)
+
+- [Lodash 源码学习](https://github.com/HeftyKoo/pocket-lodash)
+- [mini 库实现](https://github.com/xucz/awesome-1kb)
+- [开源框架源码学习](https://github.com/KieSun/awesome-frontend-source-interpretation)
+- [ 敬畏 jQuery](https://github.com/JsAaron/jQuery)
+
+- [开发奇技淫巧](https://github.com/tnfe/awesome-blackmagic)
+- [ 开发奇技淫巧 EN ](https://github.com/phuocng/frontend-tips)
+
+- [ JS 资源库 ](https://github.com/jobbole/awesome-javascript-cn)
+- [ 前端 Demo 小集合 ](https://github.com/BryanAdamss/fe-awesome-demos)
+- [ 前端工具资源库 ](https://github.com/sorrycc/awesome-f2e-libs)
+
+- [uni-app 一站式开发资源](https://github.com/aben1188/awesome-uni-app)
 - [ low code 精选资源库](https://github.com/aliaszz/awesome-lowcode-component)
 - [ less code/ no code 集合 ](https://github.com/dream2023/awesome-lesscode)
-- [ 前端状态管理的聚合，可以横向对比下前端状态管理 ](https://github.com/tnfe/awesome-state)
+- [ 前端状态管理 ](https://github.com/tnfe/awesome-state)
 - [ 高质量的有趣的前端项目](https://github.com/Wechat-ggGitHub/Awesome-GitHub-Repo)
-- [ 前端技术书籍 ](https://github.com/jobbole/awesome-web-dev-books)
-- [ 计算机方面基础、提升的经典之作 ](https://github.com/imarvinle/awesome-cs-books)
-- [ JS 资源库 ](https://github.com/jobbole/awesome-javascript-cn)
-- [ 云谦大佬整理的前端资源库 ](https://github.com/sorrycc/awesome-f2e-libs)
-- [ uni-app 的汇总 ](https://github.com/aben1188/awesome-uni-app)
-- [ 一个比较不错的 demo 小集合 ](https://github.com/BryanAdamss/fe-awesome-demos)
-- [ roadmap 大杂烩 ](https://github.com/kamranahmedse/developer-roadmap)
-- [ 之前提过的 JS 整洁之道 ](https://github.com/ryanmcdermott/clean-code-javascript)
-- [ 30s 一道题，没事看看 ](https://github.com/30-seconds/30-seconds-of-code)
+
 - [ airbnb 代码风格指南 ](https://github.com/airbnb/javascript)
-- [ 每个程序员都应该知道的东西，不单独指前端开发 ](https://github.com/mtdvio/every-programmer-should-know)
-- [ JS 的数据结构于算法 ](https://github.com/trekhleb/javascript-algorithms)
 - [ node 最佳实践 ](https://github.com/goldbergyoni/nodebestpractices)
 - [Interview](../../InterviewQuestions/P3%20八股文/1.常见问题.html)
