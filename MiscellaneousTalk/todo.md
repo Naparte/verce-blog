@@ -36,9 +36,7 @@
 
 ## principle
 
-- 原子化 css
 - Reduce 和 Transduce 的思想 Pointfree
-- codegen
 - IntersectionObserver API
 - 依赖循环加载 https://www.ruanyifeng.com/blog/2015/11/circular-dependency.html
 - https://www.ruanyifeng.com/blog/2015/05/require.html
