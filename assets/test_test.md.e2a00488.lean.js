@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as n,Q as i}from"./chunks/framework.8048b864.js";const f=JSON.parse('{"title":"电饭锅一锅出","description":"","frontmatter":{},"headers":[],"relativePath":"test/test.md","filePath":"test/test.md"}'),p={name:"test/test.md"},a=i("",14),m=[a];function s(_,o,r,c,d,h){return e(),n("div",null,m)}const u=t(p,[["render",s]]);export{f as __pageData,u as default};
